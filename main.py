@@ -1,13 +1,14 @@
 import os
 import re
 import time
-import config
-import telebot
+import os
+BOT_TOKEN = os.environ.get("8442530295:AAHOEPGvmF-jabv9ESLeeQScrrqXGTs6pQY")
+from telebot import TeleBot
 from telebot import types
 from yt_dlp import YoutubeDL
 
 # Bot Setup
-bot = telebot.TeleBot(config.token)
+bot = TeleBot("8442530295:AAHOEPGvmF-jabv9ESLeeQScrrqXGTs6pQY")
 
 # In-Memory User Database
 user_db = {}  # Format: user_id: {'count': int, 'last_reset': date}
